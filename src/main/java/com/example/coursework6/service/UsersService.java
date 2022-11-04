@@ -7,4 +7,7 @@ import java.util.List;
 public interface UsersService {
     public boolean saveUsers(Users users);
     public List<Users> getAllUsers();
+    public boolean recover(Users users);
+    public Object login(Users users);
+
 }

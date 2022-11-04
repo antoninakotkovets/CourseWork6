@@ -20,8 +20,20 @@ public class UsersController {
         return usersService.saveUsers(users);
 
     }
+
+    @PutMapping("/recover")
+    public boolean recover(@RequestBody Users users) {
+        return usersService.recover(users);
+    }
+
+    @PostMapping("/login")
+    public Object login(@RequestBody Users users){
+        return usersService.login(users);
+    }
     @GetMapping("/getAll")
     public List<Users> getAllUsers(){
         return usersService.getAllUsers();
     }
+
+
 }
